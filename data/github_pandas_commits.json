@@ -1,0 +1,60 @@
+{"sha":"0ec394e34c23","author":"Tanmay Mohan","date":"2026-09-27T14:48:34Z","message":"BUG: keep MultiIndex level names in sort_index with key (#69"}
+{"sha":"ab25d5aea5e8","author":"Aditya","date":"2026-09-27T14:47:09Z","message":"DOC: document color parameter in DataFrame.plot (#69480)"}
+{"sha":"5696a1ca3563","author":"Richard Shadrach","date":"2026-09-27T14:40:56Z","message":"CI: Decline /untake if the contributor has an open PR (#6948"}
+{"sha":"2c3569daef6f","author":"Richard Shadrach","date":"2026-09-27T13:08:50Z","message":"BUG/CLN: Remove _agg_general and finalize more groupby metho"}
+{"sha":"b2296cc7e196","author":"jbrockmendel","date":"2026-09-27T12:48:37Z","message":"ENH: infer read_excel engine from a workbook object (GH#4635"}
+{"sha":"7aac4015369f","author":"Michael Fowler","date":"2026-09-26T20:18:42Z","message":"TST: check Resampler.pipe passes positional and keyword args"}
+{"sha":"3746273e0275","author":"Aurora","date":"2026-09-26T20:10:33Z","message":"DOC: Self-host image in pandas 1.0 blog post (#68489)\n\nSigne"}
+{"sha":"22f740511f31","author":"Yi-Fan Wang","date":"2026-09-26T19:52:08Z","message":"TYP: fix Day offset stub base to SingleConstructorOffset (#6"}
+{"sha":"0b0d6547270c","author":"jbrockmendel","date":"2026-09-26T19:43:24Z","message":"CLN: document that Block.fillna callers unbox Series/Index ("}
+{"sha":"8fee61e8ddcb","author":"jbrockmendel","date":"2026-09-26T16:28:46Z","message":"TST: cover truncate with named axis and 2D dt64 ndarray with"}
+{"sha":"39b9c69e5e74","author":"jbrockmendel","date":"2026-09-26T16:28:14Z","message":"TST: skipfooter counts blank lines (GH#10164) (#69472)\n\nCo-a"}
+{"sha":"eeae81b6da3c","author":"Matthew Roeschke","date":"2026-09-25T21:50:05Z","message":"DOC: Redo AGENTS.md (#68313)"}
+{"sha":"be9eebf87e41","author":"jbrockmendel","date":"2026-09-24T22:25:15Z","message":"BUG: read_csv silently wrapped out-of-range integers (GH#552"}
+{"sha":"c6294974a710","author":"jbrockmendel","date":"2026-09-24T22:19:37Z","message":"BUG: ArrowDtype timestamp setitem silently crossed the tz-aw"}
+{"sha":"b5ad9750ca8e","author":"jbrockmendel","date":"2026-09-24T20:58:02Z","message":"DOC: summarize the read_csv improvements in the 3.1.0 whatsn"}
+{"sha":"c1402ab5cdc0","author":"jbrockmendel","date":"2026-09-24T20:20:40Z","message":"BUG: avoid Series.values deprecation warning in to_numeric ("}
+{"sha":"3f573414b99f","author":"Joris Van den Bossche","date":"2026-09-24T17:56:23Z","message":"TST: use pd.options.future.python_scalars directly in EA bas"}
+{"sha":"e2674416e46d","author":"jbrockmendel","date":"2026-09-24T15:59:37Z","message":"BUG: DTI/TDI failing to raise on 0-dim ndarray (#69411)"}
+{"sha":"f0617cccedab","author":"jbrockmendel","date":"2026-09-24T15:05:12Z","message":"BUG: suppress tz .values deprecation raised by pyarrow in in"}
+{"sha":"64f209a56fb7","author":"Tanmay Mohan","date":"2026-09-24T01:34:59Z","message":"BUG: DataFrame.query with `@` reference to a class attribute"}
+{"sha":"2fed16c2c6b7","author":"Richard Shadrach","date":"2026-09-23T21:51:24Z","message":"CI: Don't auto-close PRs that lack issue assignment (#68373)"}
+{"sha":"8f118075cf11","author":"jbrockmendel","date":"2026-09-23T19:58:09Z","message":"DEPR: revert deprecation of 'datetimetz' strings in select_d"}
+{"sha":"9f54350794e7","author":"jbrockmendel","date":"2026-09-23T19:49:35Z","message":"DOC: repair stale pandas.pydata.org documentation links (#67"}
+{"sha":"567632c8a1df","author":"Joris Van den Bossche","date":"2026-09-23T17:30:14Z","message":"ENH: support plotting with numeric nullable data on x axis ("}
+{"sha":"4fde542d9691","author":"dependabot[bot]","date":"2026-09-23T15:08:14Z","message":"Bump codecov/codecov-action from 7.0.0 to 7.1.1 (#69430)\n\nSi"}
+{"sha":"519567a7abf0","author":"Richard Shadrach","date":"2026-09-23T14:47:12Z","message":"ENH: DataFrame.filter and Series.filter to take a boolean ma"}
+{"sha":"1a561f8fd611","author":"Richard Shadrach","date":"2026-09-23T02:08:41Z","message":"CLN: Remove kind from WrappedCythonOp args (#69425)"}
+{"sha":"38c89afa44d3","author":"jbrockmendel","date":"2026-09-23T02:07:24Z","message":"CLN: restore list annotation in _get_dst_hours (GH#57154) (#"}
+{"sha":"8f6849809569","author":"Richard Shadrach","date":"2026-09-23T00:37:05Z","message":"BUG: DataFrame.select with duplicate columns (#69415)"}
+{"sha":"cebedf3f9401","author":"Richard Shadrach","date":"2026-09-23T00:26:04Z","message":"DOC: Fix return for to_numeric (#69410)"}
+{"sha":"b5bde2d8b743","author":"jbrockmendel","date":"2026-09-22T23:01:33Z","message":"PERF: raise the default parallel read_csv worker cap to 6 (#"}
+{"sha":"fbfadf45ae21","author":"Abhay Chaudhary","date":"2026-09-22T21:26:56Z","message":"BUG: rolling skew/kurt returned NaN after a window emptied ("}
+{"sha":"1fbaae651881","author":"Caner Olcay","date":"2026-09-22T21:23:53Z","message":"BUG: preserve line breaks in ODS cells in to_excel/read_exce"}
+{"sha":"c52f21c867b7","author":"Michael Fowler","date":"2026-09-22T21:18:19Z","message":"TST: add regression test for DBAPI params pass-through (GH#1"}
+{"sha":"474e8269f0fd","author":"Richard Shadrach","date":"2026-09-22T20:33:42Z","message":"ENH: Implement future.python_scalars for Index.__getitem__ ("}
+{"sha":"31bf82e7305c","author":"Dani Rahu","date":"2026-09-22T20:22:53Z","message":"BUG: Pyarrow string list indexing for negative indices  (#67"}
+{"sha":"d7a7ccf9e430","author":"Utsab Dahal","date":"2026-09-22T19:17:32Z","message":"BUG: Correct merge_asof tolerance error message (#66289) (#6"}
+{"sha":"fdb1ca585940","author":"Utsab Dahal","date":"2026-09-22T19:16:19Z","message":"BUG: fix self-contradictory set_levels/set_codes error for n"}
+{"sha":"aad6b6a4ffe9","author":"Devam0311","date":"2026-09-22T17:53:01Z","message":"BUG: allow timezone-aware subtypes in IntervalArray arrow co"}
+{"sha":"4e4872526905","author":"이지헌","date":"2026-09-22T17:41:56Z","message":"DOC: Clarify forward-looking rolling window behavior with of"}
+{"sha":"ebbcd619d490","author":"Prabhat Mangina","date":"2026-09-22T17:26:57Z","message":"BUG: exclude integer rolling on column from result (#65819)\n"}
+{"sha":"9b4575b75327","author":"Abel Wondimu","date":"2026-09-22T16:26:03Z","message":"DOC: Fix read_hdf example to pass key as keyword argument (#"}
+{"sha":"f913ed73f334","author":"jbrockmendel","date":"2026-09-22T16:25:08Z","message":"BUG: to_parquet (pyarrow) deletes a pre-existing file it can"}
+{"sha":"fcd2cbae8de1","author":"jbrockmendel","date":"2026-09-22T16:20:26Z","message":"BUG: the logical ufuncs were not rejected against datetimeli"}
+{"sha":"b95a3de7fd56","author":"jbrockmendel","date":"2026-09-22T14:48:05Z","message":"TST: add high_memory pytest mark and restore test_string_col"}
+{"sha":"550e5fd6a142","author":"jbrockmendel","date":"2026-09-22T14:45:58Z","message":"BUG: Index.insert silently truncating a value into a sparse "}
+{"sha":"7d287a5a8368","author":"Richard Shadrach","date":"2026-09-22T04:08:28Z","message":"CLN: Remove preserve_dtype from BaseGrouper.agg_series (#692"}
+{"sha":"6d3e72c5aa24","author":"Devam0311","date":"2026-09-21T20:45:34Z","message":"BUG: stacked bar subplots raise IndexError when a single-col"}
+{"sha":"1bbdcfdc3394","author":"jbrockmendel","date":"2026-09-21T20:11:41Z","message":"BUG: arrow and StringDtype ops with 2D or mismatched-length "}
+{"sha":"7a78a7b7d58c","author":"jbrockmendel","date":"2026-09-21T20:09:24Z","message":"BUG: read_csv c engine ignored na_values on a converters col"}
+{"sha":"b0bcefa0b3aa","author":"jbrockmendel","date":"2026-09-21T20:07:56Z","message":"BUG: DataFrame.duplicated self-triggering the .values deprec"}
+{"sha":"7ceea803f9f4","author":"jbrockmendel","date":"2026-09-21T20:03:03Z","message":"BUG: groupby(observed=False) with dropped NA keys raised Ind"}
+{"sha":"4304b35aae25","author":"jbrockmendel","date":"2026-09-21T20:02:17Z","message":"BUG: to_datetime returned category dtype for categorical inp"}
+{"sha":"072ea95b7820","author":"jbrockmendel","date":"2026-09-21T20:01:44Z","message":"API: select_dtypes raises on a partly specified IntervalDtyp"}
+{"sha":"cd7210014bce","author":"jbrockmendel","date":"2026-09-21T20:00:31Z","message":"REF: de-duplicate _blk_dtypes (#69151)"}
+{"sha":"0e0f3cb6bb2e","author":"jbrockmendel","date":"2026-09-21T20:00:11Z","message":"BUG: defer the blocked-numexpr warning to first use (GH#6695"}
+{"sha":"5d1c40fea08f","author":"jbrockmendel","date":"2026-09-21T19:58:06Z","message":"BUG: ArrowDtype setitem reinterpreted values through their i"}
+{"sha":"0e8d88a62859","author":"jbrockmendel","date":"2026-09-21T19:55:28Z","message":"DEPR: deprecate SparseArray sparse_index parameter, add from"}
+{"sha":"6a2edf9b4047","author":"Eastern","date":"2026-09-21T18:03:45Z","message":"BUG: preserve assertion errors for nested sequence length mi"}
+{"sha":"6ae396591198","author":"jbrockmendel","date":"2026-09-21T16:17:20Z","message":"DOC: note encoding_errors=\"strict\" is the default in read_cs"}

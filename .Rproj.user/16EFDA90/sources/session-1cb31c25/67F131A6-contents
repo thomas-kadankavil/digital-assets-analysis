@@ -1,0 +1,165 @@
+library(readr)
+library(dplyr)
+library(lubridate)
+
+url <- "https://raw.githubusercontent.com/coinmetrics/data/master/csv/btc.csv"
+
+btc <- read_csv(url, show_col_types = FALSE) %>%
+  mutate(time = ymd(time))
+
+names(btc)
+glimpse(btc)
+
+
+library(slider)
+
+btc_model <- btc %>%
+  select(time, PriceUSD, TxCnt, AdrActCnt, FeeTotUSD, HashRate) %>%
+  arrange(time) %>%
+  mutate(
+    log_return = log(PriceUSD) - log(lag(PriceUSD)),
+    volatility_7d = slide_dbl(
+      log_return,
+      sd,
+      .before = 6,
+      .complete = TRUE,
+      na.rm = TRUE
+    )
+  )
+
+names(btc)
+grep("fee", names(btc), ignore.case = TRUE, value = TRUE)
+grep("Adr|Addr|Tx|Hash|Price", names(btc), ignore.case = TRUE, value = TRUE)
+
+btc_model <- btc %>%
+  select(time, PriceUSD, TxCnt, AdrActCnt, HashRate)
+
+library(dplyr)
+library(slider)
+
+btc_model <- btc_model %>%
+  arrange(time) %>%
+  mutate(
+    log_return = log(PriceUSD) - log(lag(PriceUSD)),
+    volatility_7d = slide_dbl(
+      log_return,
+      sd,
+      .before = 6,
+      .complete = TRUE,
+      na.rm = TRUE
+    )
+  )
+
+
+wanted_columns <- c(
+  "time",
+  "PriceUSD",
+  "TxCnt",
+  "AdrActCnt",
+  "FeeTotUSD",
+  "HashRate"
+)
+
+btc_model <- btc %>%
+  select(any_of(wanted_columns))
+
+names(btc_model)
+grep("fee", names(btc), ignore.case = TRUE, value = TRUE)
+
+btc_model <- btc %>%
+  select(
+    time,
+    PriceUSD,
+    TxCnt,
+    AdrActCnt,
+    FeeTotNtv,
+    HashRate
+  )
+
+btc_model <- btc %>%
+  select(
+    time,
+    PriceUSD,
+    TxCnt,
+    AdrActCnt
+  ) %>%
+  arrange(time) %>%
+  mutate(
+    log_price = log(PriceUSD),
+    log_return = log(PriceUSD) - log(lag(PriceUSD)),
+    log_tx_count = log1p(TxCnt),
+    log_active_addresses = log1p(AdrActCnt),
+    volatility_7d = slide_dbl(
+      log_return,
+      sd,
+      .before = 6,
+      .complete = TRUE,
+      na.rm = TRUE
+    )
+  )
+
+
+btc_model <- btc %>%
+  select(
+    time,
+    PriceUSD,
+    TxCnt,
+    AdrActCnt
+  ) %>%
+  arrange(time) %>%
+  mutate(
+    log_price = log(PriceUSD),
+    log_return = log(PriceUSD) - log(lag(PriceUSD)),
+    log_tx_count = log1p(TxCnt),
+    log_active_addresses = log1p(AdrActCnt),
+    volatility_7d = slide_dbl(
+      log_return,
+      sd,
+      .before = 6,
+      .complete = TRUE,
+      na.rm = TRUE
+    )
+  )
+
+summary(btc_model)
+
+colSums(is.na(btc_model))
+
+head(btc_model)
+
+tail(btc_model)
+
+btc_analysis <- btc_model %>%
+  filter(
+    is.finite(log_return),
+    is.finite(log_tx_count),
+    is.finite(log_active_addresses),
+    is.finite(volatility_7d)
+  )
+
+nrow(btc_analysis)
+
+
+
+btc_analysis <- btc_model %>%
+  mutate(
+    log_tx_count_lag1 = lag(log_tx_count, 1),
+    log_active_addresses_lag1 = lag(log_active_addresses, 1)
+  ) %>%
+  filter(
+    is.finite(volatility_7d),
+    is.finite(log_tx_count_lag1),
+    is.finite(log_active_addresses_lag1)
+  )
+
+model_2 <- lm(
+  volatility_7d ~ log_tx_count_lag1 + log_active_addresses_lag1,
+  data = btc_analysis
+)
+
+summary(model_2)
+
+select(time, PriceUSD, TxCnt, AdrActCnt, FeeTotUSD, HashRate)
+select(any_of(c("time", "PriceUSD", "TxCnt", "AdrActCnt", "FeeTotUSD", "HashRate")))
+
+names(btc_model)
